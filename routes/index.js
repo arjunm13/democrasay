@@ -10,7 +10,9 @@ var total=0;
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-  res.render('index', { title: 'Express', 
+  res.render('index', { title: 'Express',
+  	agreenumber : agree, 
+  	disagreenumber : disagree, 
 agree: agreepercent,
 disagree: disagreepercent});
 });
@@ -25,6 +27,8 @@ router.get('/agree', function(req, res, next) {
 
 	console.log(agree);
   res.render('index', { title: 'Express', 
+  	  	agreenumber : agree, 
+  	disagreenumber : disagree, 
 agree: agreepercent,
 disagree: disagreepercent});
 });
@@ -37,6 +41,8 @@ router.get('/disagree', function(req, res, next) {
 	agreepercent= agreepercent.toFixed(2);
 	console.log(disagree);
   res.render('index', { title: 'Express', 
+  	  	agreenumber : agree, 
+  	disagreenumber : disagree, 
 agree: agreepercent,
 disagree: disagreepercent});
 });
